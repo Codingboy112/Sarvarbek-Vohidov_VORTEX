@@ -1,44 +1,75 @@
-.loader {
-    width: 100px;
-    aspect-ratio: 1;
-    display: grid;
-    border: 8px solid #0000;
-    border-radius: 50%;
-    border-right-color: white;
-    animation: l15 1s infinite linear;
+.hero {
+  margin-top: 30px;
+  .hero__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    .first__hero {
+        width: 50%;
+      font-family: sans-serif;
+
+      .inline-block__holder{
+        display: inline-block;
+      }
+      .welcoming__text {
+       border-right: 2px solid;
+       width: 100%;
+       white-space: nowrap;
+       overflow: hidden;
+       animation: typing 1s steps(7), cursor .4s step-end infinite alternate;
+      }
+
+      .hero__text {
+        font-size: 66px;
+        font-family: "Bebas Neue", sans-serif;
+      }
+      .small__introduction {
+        color: #C7C7C7;
+      }
+      .contact__divs{
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        .hero__contact--btn{
+            border-radius: 26px;
+            padding: 16px 32px;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: #D3E97A;
+        }
+       .portfolio__btn{
+        padding: 16px 18px;
+        border-radius: 50%;
+        font-size: 16px;
+        border: none;
+        color: #D3E97A;
+        background-color: #222222;
+       }
+      }
+    }
   }
-  .loader::before,
-  .loader::after {    
-    content: "";
-    grid-area: 1/1;
-    margin: 2px;
-    border: inherit;
-    border-radius: 50%;
-    animation: l15 2s infinite;
-  }
-  .loader::after {
-    margin: 8px;
-    animation-duration: 3s;
-  }
-  @keyframes l15{ 
-    100%{transform: rotate(1turn)}
+}
+
+
+@keyframes typing {
+  from{width: 0;}
+}
+
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
   }
 
-  #preloader {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    justify-content: center;  
-    height: 100vh;  
-    width: 100%;  
-    position: fixed;  
-    top: 0;
-    left: 0;
-    z-index: 9999;  
-    color: white;
-    font-family: "Boldonse", system-ui;
-    font-weight: 100;
-    font-size: 22px;
-    gap: 60px;
-}
+  @media only screen and (max-width: 992px) {
+    .hero{
+      .hero__wrapper{
+       flex-direction: column;
+       .first__hero{
+        width: 100%;
+       }
+      }
+    }
+  }
