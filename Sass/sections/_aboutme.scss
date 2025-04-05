@@ -1,0 +1,80 @@
+.aboutme{
+    font-family: sans-serif;
+    margin: 60px 0px;
+    .aboutme__wrapper{
+        display: flex;
+        justify-content: space-between;
+        .first__aboutme{
+            width: 60%;
+            margin-top: 40px;
+            .aboutme__intro{
+                font-family: "Bebas Neue";
+                font-size: 56px;
+            }
+            
+            .aboutme__main{
+                font-size: 34px;
+                margin-top: 20px;
+            }
+            .aboutme__small{
+                font-size: 16px;
+                margin: 15px 0px;
+            }
+            .aboutme__link{
+                color: #D3E97A;
+                text-decoration: none;
+                margin-bottom: 5px;
+                font-size: 18px;
+                border-bottom: 2px solid #D3E97A;
+            }
+        }
+        .second__aboutme{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            .skill__intro{
+                font-size: 20px;
+                margin-top: 40px;
+            }
+            .skill__container--holder{
+                display: inline-block;
+            }
+            .skill__container {
+               width: 100%;
+               display: grid;
+               grid-template-columns: 1fr 1fr 1fr;
+               margin-top: 20px;
+               gap: 10px;
+               .skill__icon{
+                width: 90px;
+                padding: 14px;
+                background-color: #1A1A1A;
+                border-radius: 20px;
+                transform: rotate(7deg);
+                transition: all .2s;
+
+                &:hover{
+                    transform: rotate(0deg);
+                    transform: scale(1.1);
+                }
+               }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .aboutme{
+        .aboutme__wrapper{
+            flex-direction: column;
+            .first__aboutme{
+                width: 100%;
+            }
+            .second__aboutme{
+                width: 100%;
+                align-items: center;
+            }
+        }
+    }
+}

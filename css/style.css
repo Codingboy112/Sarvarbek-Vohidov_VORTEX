@@ -159,6 +159,7 @@ body {
 }
 .hero {
   margin-top: 30px;
+  margin-bottom: 70px;
 }
 .hero .hero__wrapper {
   display: flex;
@@ -178,7 +179,7 @@ body {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 1s steps(7), cursor 0.4s step-end infinite alternate;
+  animation: typing 0.5s steps(7), cursor 0.4s step-end infinite alternate;
 }
 .hero .hero__wrapper .first__hero .hero__text {
   font-size: 66px;
@@ -197,8 +198,9 @@ body {
   padding: 16px 32px;
   border: none;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   background-color: #D3E97A;
+  color: #0A0A0A;
 }
 .hero .hero__wrapper .first__hero .contact__divs .portfolio__btn {
   padding: 16px 18px;
@@ -207,6 +209,10 @@ body {
   border: none;
   color: #D3E97A;
   background-color: #222222;
+}
+.hero .hero__wrapper .second__hero {
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes typing {
@@ -225,5 +231,309 @@ body {
   }
   .hero .hero__wrapper .first__hero {
     width: 100%;
+  }
+  .hero .hero__wrapper .second__hero {
+    width: 100%;
+  }
+  .hero .hero__wrapper .second__hero img {
+    width: 80%;
+  }
+}
+.darker__line {
+  border: 1.3px solid #484848;
+}
+
+.projects {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.projects .projects__intro {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 55px;
+}
+.projects .projects__details {
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: #C7C7C7;
+}
+.projects .project__wrapper {
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  min-height: 500px;
+  gap: 40px;
+}
+.projects .project__wrapper .first__project {
+  position: relative;
+  width: 50%;
+  background-color: #1A1A1A;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project__wrapper .first__project .project__status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: sans-serif;
+  background-color: #0A0A0A;
+  padding: 6px;
+  border-radius: 15px;
+}
+.projects .project__wrapper .first__project .project__img {
+  width: 76%;
+}
+.projects .project__wrapper .second__project {
+  width: 50%;
+  margin-top: 50px;
+  font-family: sans-serif;
+}
+.projects .project__wrapper .second__project .project__title {
+  font-size: 36px;
+  font-weight: 500;
+}
+.projects .project__wrapper .second__project .project__detail {
+  color: #C7C7C7;
+  margin: 20px 0px;
+}
+.projects .project__wrapper .second__project .project__info {
+  list-style-type: none;
+}
+.projects .project__wrapper .second__project .project__info .underline__project {
+  padding: 14px 0px;
+  border-bottom: 1.3px solid #484848;
+  display: flex;
+  justify-content: space-between;
+}
+.projects .project__wrapper .second__project .project__info .underline__project .info__status {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+.projects .project__wrapper .second__project .project__info .underline__project .info__status2 {
+  color: #C7C7C7;
+}
+.projects .project__wrapper .second__project .project__links {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+.projects .project__wrapper .second__project .project__links .project__link {
+  color: #D3E97A;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #D3E97A;
+}
+
+@media only screen and (max-width: 992px) {
+  .projects .project__wrapper {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  .projects .project__wrapper .first__project {
+    width: 100%;
+  }
+  .projects .project__wrapper .second__project {
+    width: 100%;
+  }
+}
+.aboutme {
+  font-family: sans-serif;
+  margin: 60px 0px;
+}
+.aboutme .aboutme__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutme .aboutme__wrapper .first__aboutme {
+  width: 60%;
+  margin-top: 40px;
+}
+.aboutme .aboutme__wrapper .first__aboutme .aboutme__intro {
+  font-family: "Bebas Neue";
+  font-size: 56px;
+}
+.aboutme .aboutme__wrapper .first__aboutme .aboutme__main {
+  font-size: 34px;
+  margin-top: 20px;
+}
+.aboutme .aboutme__wrapper .first__aboutme .aboutme__small {
+  font-size: 16px;
+  margin: 15px 0px;
+}
+.aboutme .aboutme__wrapper .first__aboutme .aboutme__link {
+  color: #D3E97A;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 18px;
+  border-bottom: 2px solid #D3E97A;
+}
+.aboutme .aboutme__wrapper .second__aboutme {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.aboutme .aboutme__wrapper .second__aboutme .skill__intro {
+  font-size: 20px;
+  margin-top: 40px;
+}
+.aboutme .aboutme__wrapper .second__aboutme .skill__container--holder {
+  display: inline-block;
+}
+.aboutme .aboutme__wrapper .second__aboutme .skill__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20px;
+  gap: 10px;
+}
+.aboutme .aboutme__wrapper .second__aboutme .skill__container .skill__icon {
+  width: 90px;
+  padding: 14px;
+  background-color: #1A1A1A;
+  border-radius: 20px;
+  transform: rotate(7deg);
+  transition: all 0.2s;
+}
+.aboutme .aboutme__wrapper .second__aboutme .skill__container .skill__icon:hover {
+  transform: rotate(0deg);
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 992px) {
+  .aboutme .aboutme__wrapper {
+    flex-direction: column;
+  }
+  .aboutme .aboutme__wrapper .first__aboutme {
+    width: 100%;
+  }
+  .aboutme .aboutme__wrapper .second__aboutme {
+    width: 100%;
+    align-items: center;
+  }
+}
+.connect {
+  margin: 60px 0;
+}
+.connect .connect__wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+.connect .connect__wrapper .first__connect {
+  width: 50%;
+}
+.connect .connect__wrapper .first__connect .connect__intro {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+}
+.connect .connect__wrapper .first__connect .hello__text {
+  color: #C7C7C7;
+  margin-bottom: 10px;
+}
+.connect .connect__wrapper .first__connect .hello__text a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #D3E97A;
+}
+.connect .connect__wrapper .first__connect .more__info {
+  color: #C7C7C7;
+}
+.connect .connect__wrapper .first__connect .more__info a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #D3E97A;
+}
+.connect .connect__wrapper .first__connect .social__links {
+  display: flex;
+  gap: 20px;
+  font-size: 35px;
+  margin-top: 30px;
+}
+.connect .connect__wrapper .first__connect .social__links .connect__icon {
+  color: #D3E97A;
+}
+.connect .connect__wrapper .second__connect {
+  width: 50%;
+}
+.connect .connect__wrapper .second__connect input {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 5px;
+  background-color: #1A1A1A;
+  border: none;
+  outline: none;
+  color: white;
+}
+.connect .connect__wrapper .second__connect input::-moz-placeholder {
+  color: white;
+  font-weight: 500;
+}
+.connect .connect__wrapper .second__connect input::placeholder {
+  color: white;
+  font-weight: 500;
+}
+.connect .connect__wrapper .second__connect textarea {
+  width: 100%;
+  height: 70px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1A1A1A;
+  padding-top: 10px;
+  padding-left: 20px;
+  margin-top: 5px;
+  outline: none;
+  color: white;
+}
+.connect .connect__wrapper .second__connect textarea::-moz-placeholder {
+  color: white;
+  font-size: 16px;
+}
+.connect .connect__wrapper .second__connect textarea::placeholder {
+  color: white;
+  font-size: 16px;
+}
+.connect .connect__wrapper .second__connect #submitBtn {
+  margin-top: 20px;
+  padding: 10px 26px;
+  border-radius: 20px;
+  border: none;
+  background-color: #D3E97A;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 992px) {
+  .connect .connect__wrapper {
+    flex-direction: column;
+  }
+  .connect .connect__wrapper .first__connect {
+    width: 100%;
+  }
+  .connect .connect__wrapper .second__connect {
+    width: 100%;
+    margin-top: 60px;
+  }
+}
+.footer {
+  font-family: sans-serif;
+}
+.footer .footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer .footer__wrapper {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,17 @@
+.footer{
+    font-family: sans-serif;
+    .footer__wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer{
+        .footer__wrapper{
+
+            flex-direction: column;
+        }
+    }
+}
