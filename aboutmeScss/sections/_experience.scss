@@ -1,0 +1,61 @@
+.experience {
+  margin: 60px 0;
+  font-family: sans-serif;
+  .experience__wrapper {
+    display: flex;
+    .first__experience {
+      width: 50%;
+      .experience__intro {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 54px;
+      }
+    }
+    .second__experience {
+      width: 50%;
+      .experience__div {
+        .exper__wrapper {
+          display: flex;
+          justify-content: space-between;
+        }
+        .experience__job {
+          font-size: 24px;
+        }
+        .experience__date {
+          color: #c7c7c7;
+        }
+        .experience__details {
+          margin-top: 15px;
+          margin-bottom: 30px;
+          color: #c7c7c7;
+        }
+        .worker {
+          color: #d3e97a;
+        }
+        .more__info{
+            .download__link{
+                color: white;
+                text-decoration: none;
+                border-bottom: 2px solid #d3e97a;
+                padding-bottom: 2px;
+            }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .experience{
+     .experience__wrapper{
+        flex-direction: column;
+        .first__experience{
+            width: 100%;
+        }
+        .second__experience{
+            width: 100%;
+            margin-top: 40px;
+        }
+     }
+    }
+}

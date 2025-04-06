@@ -122,188 +122,6 @@ html {
     display: flex;
   }
 }
-.hero {
-  margin-top: 30px;
-  margin-bottom: 70px;
-}
-.hero .hero__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-}
-.hero .hero__wrapper .first__hero {
-  width: 50%;
-  font-family: sans-serif;
-}
-.hero .hero__wrapper .first__hero .inline-block__holder {
-  display: inline-block;
-}
-.hero .hero__wrapper .first__hero .welcoming__text {
-  border-right: 2px solid;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 0.5s steps(7), cursor 0.4s step-end infinite alternate;
-}
-.hero .hero__wrapper .first__hero .hero__text {
-  font-size: 66px;
-  font-family: "Bebas Neue", sans-serif;
-}
-.hero .hero__wrapper .first__hero .small__introduction {
-  color: #C7C7C7;
-}
-.hero .hero__wrapper .first__hero .contact__divs {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-}
-.hero .hero__wrapper .first__hero .contact__divs .hero__contact--btn {
-  border-radius: 26px;
-  padding: 16px 32px;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  background-color: #D3E97A;
-  color: #0A0A0A;
-}
-.hero .hero__wrapper .first__hero .contact__divs .portfolio__btn {
-  padding: 16px 18px;
-  border-radius: 50%;
-  font-size: 16px;
-  border: none;
-  color: #D3E97A;
-  background-color: #222222;
-}
-.hero .hero__wrapper .second__hero {
-  display: flex;
-  justify-content: center;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-@media only screen and (max-width: 992px) {
-  .hero .hero__wrapper {
-    flex-direction: column;
-  }
-  .hero .hero__wrapper .first__hero {
-    width: 100%;
-  }
-  .hero .hero__wrapper .second__hero {
-    width: 100%;
-  }
-  .hero .hero__wrapper .second__hero img {
-    width: 80%;
-  }
-}
-.darker__line {
-  border: 1.3px solid #484848;
-}
-
-.projects {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-.projects .projects__intro {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 55px;
-}
-.projects .projects__details {
-  font-family: sans-serif;
-  font-size: 17px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  color: #C7C7C7;
-}
-.projects .project__wrapper {
-  width: 100%;
-  display: flex;
-  margin-top: 50px;
-  min-height: 500px;
-  gap: 40px;
-}
-.projects .project__wrapper .first__project {
-  position: relative;
-  width: 50%;
-  background-color: #1A1A1A;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.projects .project__wrapper .first__project .project__status {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-family: sans-serif;
-  background-color: #0A0A0A;
-  padding: 6px;
-  border-radius: 15px;
-}
-.projects .project__wrapper .first__project .project__img {
-  width: 76%;
-}
-.projects .project__wrapper .second__project {
-  width: 50%;
-  margin-top: 50px;
-  font-family: sans-serif;
-}
-.projects .project__wrapper .second__project .project__title {
-  font-size: 36px;
-  font-weight: 500;
-}
-.projects .project__wrapper .second__project .project__detail {
-  color: #C7C7C7;
-  margin: 20px 0px;
-}
-.projects .project__wrapper .second__project .project__info {
-  list-style-type: none;
-}
-.projects .project__wrapper .second__project .project__info .underline__project {
-  padding: 14px 0px;
-  border-bottom: 1.3px solid #484848;
-  display: flex;
-  justify-content: space-between;
-}
-.projects .project__wrapper .second__project .project__info .underline__project .info__status {
-  color: #FFFFFF;
-  font-weight: 500;
-}
-.projects .project__wrapper .second__project .project__info .underline__project .info__status2 {
-  color: #C7C7C7;
-}
-.projects .project__wrapper .second__project .project__links {
-  margin-top: 30px;
-  display: flex;
-  gap: 30px;
-}
-.projects .project__wrapper .second__project .project__links .project__link {
-  color: #D3E97A;
-  text-decoration: none;
-  padding-bottom: 4px;
-  border-bottom: 2px solid #D3E97A;
-}
-
-@media only screen and (max-width: 992px) {
-  .projects .project__wrapper {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-  .projects .project__wrapper .first__project {
-    width: 100%;
-  }
-  .projects .project__wrapper .second__project {
-    width: 100%;
-  }
-}
 .aboutme {
   font-family: sans-serif;
   margin: 60px 0px;
@@ -329,11 +147,42 @@ html {
   margin: 15px 0px;
 }
 .aboutme .aboutme__wrapper .first__aboutme .aboutme__link {
-  color: #D3E97A;
+  color: #d3e97a;
   text-decoration: none;
   margin-bottom: 5px;
   font-size: 18px;
-  border-bottom: 2px solid #D3E97A;
+  border-bottom: 2px solid #d3e97a;
+}
+.aboutme .aboutme__wrapper .first__aboutme .contact__divs {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.aboutme .aboutme__wrapper .first__aboutme .contact__divs .hero__contact--btn {
+  border-radius: 26px;
+  padding: 16px 10px 16px 32px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #d3e97a;
+  color: #0a0a0a;
+  cursor: pointer;
+}
+.aboutme .aboutme__wrapper .first__aboutme .contact__divs .portfolio__btn {
+  cursor: pointer;
+  padding: 16px 18px;
+  border-radius: 50%;
+  font-size: 16px;
+  border: none;
+  color: #d3e97a;
+  background-color: #222222;
+}
+.aboutme .aboutme__wrapper .first__aboutme .contact__divs .download__icon {
+  padding: 10px;
+  background-color: #222222;
+  color: white;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 .aboutme .aboutme__wrapper .second__aboutme {
   width: 40%;
@@ -358,7 +207,7 @@ html {
 .aboutme .aboutme__wrapper .second__aboutme .skill__container .skill__icon {
   width: 90px;
   padding: 14px;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   border-radius: 20px;
   transform: rotate(7deg);
   transition: all 0.2s;
@@ -378,6 +227,162 @@ html {
   .aboutme .aboutme__wrapper .second__aboutme {
     width: 100%;
     align-items: center;
+  }
+}
+.section__image {
+  width: 100%;
+  background-color: #C7C7C7;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+}
+.section__image img {
+  width: 30%;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+  .aboutme .aboutme__wrapper .first__aboutme .aboutme__intro {
+    font-size: 46px;
+  }
+  .aboutme .aboutme__wrapper .first__aboutme .aboutme__main {
+    font-size: 23px;
+  }
+  .aboutme .aboutme__wrapper .first__aboutme .aboutme__small {
+    font-size: 15px;
+  }
+  .aboutme .aboutme__wrapper .first__aboutme .contact__divs .hero__contact--btn {
+    padding: 11px 5px 11px 27px;
+    font-size: 12px;
+  }
+  .aboutme .aboutme__wrapper .first__aboutme .contact__divs .download__icon {
+    padding: 7px;
+  }
+  .aboutme .aboutme__wrapper .first__aboutme .contact__divs .portfolio__btn {
+    padding: 9px 10px;
+    border-radius: 50%;
+    font-size: 16px;
+    border: none;
+    color: #d3e97a;
+    background-color: #222222;
+  }
+}
+.capabilities {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-family: sans-serif;
+}
+.capabilities .capabilities__wrapper {
+  display: flex;
+}
+.capabilities .capabilities__wrapper .first__capability {
+  width: 50%;
+}
+.capabilities .capabilities__wrapper .first__capability .capability__intro {
+  font-family: "Bebas Neue";
+  font-size: 54px;
+}
+.capabilities .capabilities__wrapper .second__capability {
+  width: 50%;
+}
+.capabilities .capabilities__wrapper .second__capability .capability__motive {
+  font-size: 18px;
+  color: #c7c7c7;
+  line-height: 30px;
+}
+.capabilities .capabilities__wrapper .second__capability .capability__show {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.capabilities .capabilities__wrapper .second__capability .capability__show .skill__capab {
+  padding: 14px;
+  border: 2px solid #484848;
+  border-radius: 30px;
+  background-color: transparent;
+  color: white;
+  transition: all 0.4s;
+  font-size: 17px;
+}
+.capabilities .capabilities__wrapper .second__capability .capability__show .skill__capab:hover {
+  border: 2px solid white;
+}
+
+@media only screen and (max-width: 768px) {
+  .capabilities .capabilities__wrapper {
+    flex-direction: column;
+  }
+  .capabilities .capabilities__wrapper .first__capability {
+    width: 100%;
+  }
+  .capabilities .capabilities__wrapper .first__capability .capability__intro {
+    font-size: 44px;
+  }
+  .capabilities .capabilities__wrapper .second__capability {
+    width: 100%;
+  }
+  .capabilities .capabilities__wrapper .second__capability .capability__motive {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+.darker__line {
+  border: 1.3px solid #484848;
+}
+
+.experience {
+  margin: 60px 0;
+  font-family: sans-serif;
+}
+.experience .experience__wrapper {
+  display: flex;
+}
+.experience .experience__wrapper .first__experience {
+  width: 50%;
+}
+.experience .experience__wrapper .first__experience .experience__intro {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 54px;
+}
+.experience .experience__wrapper .second__experience {
+  width: 50%;
+}
+.experience .experience__wrapper .second__experience .experience__div .exper__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.experience .experience__wrapper .second__experience .experience__div .experience__job {
+  font-size: 24px;
+}
+.experience .experience__wrapper .second__experience .experience__div .experience__date {
+  color: #c7c7c7;
+}
+.experience .experience__wrapper .second__experience .experience__div .experience__details {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: #c7c7c7;
+}
+.experience .experience__wrapper .second__experience .experience__div .worker {
+  color: #d3e97a;
+}
+.experience .experience__wrapper .second__experience .experience__div .more__info .download__link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid #d3e97a;
+  padding-bottom: 2px;
+}
+
+@media only screen and (max-width: 992px) {
+  .experience .experience__wrapper {
+    flex-direction: column;
+  }
+  .experience .experience__wrapper .first__experience {
+    width: 100%;
+  }
+  .experience .experience__wrapper .second__experience {
+    width: 100%;
+    margin-top: 40px;
   }
 }
 .connect {
@@ -503,4 +508,4 @@ html {
   .footer .footer__wrapper {
     flex-direction: column;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=aboutme.css.map */

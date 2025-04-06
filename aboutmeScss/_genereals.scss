@@ -9,14 +9,17 @@ body{
     color: white;
 }
 
+
 *::selection {
   background-color: #D3E97A;
   color: #0A0A0A;
 }
 
+
 html{
   scroll-behavior: smooth;
 }
+
 
 .container {
     width: 100%;
