@@ -4,6 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vohidov Sarvarbek | VORTEX</title>
+    <style>
+      .loader {
+        width: 100px;
+        aspect-ratio: 1;
+        display: grid;
+        border: 8px solid rgba(10, 10, 10, 1);
+        border-radius: 50%;
+        border-right-color: white;
+        animation: l15 1s infinite linear;
+      }
+      .loader::before,
+      .loader::after {
+        content: "";
+        grid-area: 1/1;
+        margin: 2px;
+        border: inherit;
+        border-radius: 50%;
+        animation: l15 2s infinite;
+      }
+      .loader::after {
+        margin: 8px;
+        animation-duration: 3s;
+      }
+      @keyframes l15 {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+
+      #preloader {
+        background-color: rgba(10, 10, 10, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        color: white;
+        font-family: "Boldonse", system-ui;
+        font-weight: 100;
+        font-size: 22px;
+        gap: 60px;
+      }
+    </style>
+    <script defer>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 500);
+      });
+    </script>
+
     <link rel="icon" href="./assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" href="./Icon.svg" />
@@ -16,7 +74,10 @@
       href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -331,22 +392,44 @@
                 <a href="https://t.me/OblivionX_2"
                   ><i class="bi bi-telegram connect__icon"></i
                 ></a>
-                <a href="https://github.com/Codingboy112"><i class="bi bi-github connect__icon"></i></a>
-                <a href="mailto:tylertheunknownss@gmail.com"><i class="bi bi-envelope connect__icon"></i></a>
-                <a href="https://x.com/Tyler8174690881"><i class="bi bi-twitter-x connect__icon"></i></a>
+                <a href="https://github.com/Codingboy112"
+                  ><i class="bi bi-github connect__icon"></i
+                ></a>
+                <a href="mailto:tylertheunknownss@gmail.com"
+                  ><i class="bi bi-envelope connect__icon"></i
+                ></a>
+                <a href="https://x.com/Tyler8174690881"
+                  ><i class="bi bi-twitter-x connect__icon"></i
+                ></a>
               </div>
             </div>
             <div class="second__connect">
               <form action="" id="user__details">
-                <label for="userName">Name</label><br>
-              <input type="text" class="same__inputs" id="userName" placeholder="John Doe"><br>
-              <label for="userEmail">Email</label><br>
-              <input type="email" class="same__inputs" id="userEmail" placeholder="example@gmail.com"><br>
-              <label for="userPhone">Phone Number</label><br>
-              <input type="number" class="same__inputs" id="userPhone" placeholder="+(998) 99 999 99 99"><br>
-              <label for="userMessage">Message</label><br>
-              <textarea id="userMessage" placeholder="Message"></textarea><br>
-              <button id="submitBtn" type="submit">SUBMIT</button>
+                <label for="userName">Name</label><br />
+                <input
+                  type="text"
+                  class="same__inputs"
+                  id="userName"
+                  placeholder="John Doe"
+                /><br />
+                <label for="userEmail">Email</label><br />
+                <input
+                  type="email"
+                  class="same__inputs"
+                  id="userEmail"
+                  placeholder="example@gmail.com"
+                /><br />
+                <label for="userPhone">Phone Number</label><br />
+                <input
+                  type="number"
+                  class="same__inputs"
+                  id="userPhone"
+                  placeholder="+(998) 99 999 99 99"
+                /><br />
+                <label for="userMessage">Message</label><br />
+                <textarea id="userMessage" placeholder="Message"></textarea
+                ><br />
+                <button id="submitBtn" type="submit">SUBMIT</button>
               </form>
             </div>
           </div>
