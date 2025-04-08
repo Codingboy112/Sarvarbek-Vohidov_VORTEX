@@ -40,3 +40,10 @@ elForm.addEventListener("submit", (event) => {
   elNumber.value = "";
   userMessage.value = "";
 });
+
+
+document.addEventListener("keydown", (event) => {
+  if (event.key.toLowerCase() === 'a') {
+    document.getElementById("wordDownload").click();
+  }
+});
