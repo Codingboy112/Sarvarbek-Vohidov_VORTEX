@@ -7,18 +7,18 @@
     align-items: center;
     gap: 60px;
     .first__hero {
-        width: 50%;
+      width: 50%;
       font-family: sans-serif;
 
-      .inline-block__holder{
+      .inline-block__holder {
         display: inline-block;
       }
       .welcoming__text {
-       border-right: 2px solid;
-       width: 100%;
-       white-space: nowrap;
-       overflow: hidden;
-       animation: typing 0.5s steps(7), cursor .4s step-end infinite alternate;
+        border-right: 2px solid;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 0.5s steps(7), cursor 0.4s step-end infinite alternate;
       }
 
       .hero__text {
@@ -26,62 +26,78 @@
         font-family: "Bebas Neue", sans-serif;
       }
       .small__introduction {
-        color: #C7C7C7;
+        color: #c7c7c7;
       }
-      .contact__divs{
+      .contact__divs {
         margin-top: 20px;
         display: flex;
         gap: 10px;
-        .hero__contact--btn{
-            border-radius: 26px;
-            padding: 16px 32px;
-            border: none;
-            font-size: 16px;
-            font-weight: 600;
-            background-color: #D3E97A;
-            color: #0A0A0A;
+        .hero__contact--btn {
+          border-radius: 26px;
+          padding: 16px 32px;
+          border: none;
+          font-size: 16px;
+          font-weight: 600;
+          background-color: #d3e97a;
+          color: #0a0a0a;
         }
-       .portfolio__btn{
-        padding: 16px 18px;
-        border-radius: 50%;
-        font-size: 16px;
-        border: none;
-        color: #D3E97A;
-        background-color: #222222;
-       }
+        .portfolio__btn {
+          padding: 16px 18px;
+          border-radius: 50%;
+          font-size: 16px;
+          border: none;
+          color: #d3e97a;
+          background-color: #222222;
+        }
       }
     }
-    .second__hero{
+    .second__hero {
       display: flex;
       justify-content: center;
     }
   }
 }
 
-
 @keyframes typing {
-  from{width: 0;}
+  from {
+    width: 0;
+  }
 }
 
-  @keyframes cursor {
-    50% {
-      border-color: transparent;
-    }
+@keyframes cursor {
+  50% {
+    border-color: transparent;
   }
+}
 
-  @media only screen and (max-width: 992px) {
-    .hero{
-      .hero__wrapper{
-       flex-direction: column;
-       .first__hero{
+
+@media only screen and (max-width: 992px) {
+  .hero {
+    .hero__wrapper {
+      .first__hero {
         width: 100%;
-       }
-       .second__hero{
+      }
+      .second__hero {
         width: 100%;
-        img{
-          width: 80%;
-        }
-       }
       }
     }
   }
+}
+
+
+
+@media only screen and (max-width: 560px) {
+  .hero {
+    .hero__wrapper {
+      flex-direction: column;
+      .first__hero {
+        width: 100%;
+        .hero__text{
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+
+

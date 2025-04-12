@@ -76,7 +76,7 @@ html {
 }
 .header .navbar .navbar__wrapper .second__links .navbar__links {
   text-decoration: none;
-  color: #C7C7C7;
+  color: #c7c7c7;
   font-family: sans-serif;
   font-size: 20px;
 }
@@ -102,16 +102,16 @@ html {
 }
 .header .navbar .links__dropdown .navbar__links {
   text-decoration: none;
-  color: #C7C7C7;
+  color: #c7c7c7;
   font-family: sans-serif;
   font-size: 20px;
 }
 
 .links__dropdown--active {
-  height: 170px !important;
+  height: 250px !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .header .navbar .navbar__wrapper .second__links .navbar__links {
     display: none;
   }
@@ -122,6 +122,21 @@ html {
     display: flex;
   }
 }
+.choose__lang--style {
+  background-color: transparent;
+  border: none;
+  color: #c7c7c7;
+  font-family: sans-serif;
+  font-size: 20px;
+  outline: none;
+}
+
+.choose__lang--style option {
+  background-color: #000000;
+  color: white;
+  border: 1px solid white;
+}
+
 .hero {
   margin-top: 30px;
   margin-bottom: 70px;
@@ -151,7 +166,7 @@ html {
   font-family: "Bebas Neue", sans-serif;
 }
 .hero .hero__wrapper .first__hero .small__introduction {
-  color: #C7C7C7;
+  color: #c7c7c7;
 }
 .hero .hero__wrapper .first__hero .contact__divs {
   margin-top: 20px;
@@ -164,15 +179,15 @@ html {
   border: none;
   font-size: 16px;
   font-weight: 600;
-  background-color: #D3E97A;
-  color: #0A0A0A;
+  background-color: #d3e97a;
+  color: #0a0a0a;
 }
 .hero .hero__wrapper .first__hero .contact__divs .portfolio__btn {
   padding: 16px 18px;
   border-radius: 50%;
   font-size: 16px;
   border: none;
-  color: #D3E97A;
+  color: #d3e97a;
   background-color: #222222;
 }
 .hero .hero__wrapper .second__hero {
@@ -191,17 +206,22 @@ html {
   }
 }
 @media only screen and (max-width: 992px) {
-  .hero .hero__wrapper {
-    flex-direction: column;
-  }
   .hero .hero__wrapper .first__hero {
     width: 100%;
   }
   .hero .hero__wrapper .second__hero {
     width: 100%;
   }
-  .hero .hero__wrapper .second__hero img {
-    width: 80%;
+}
+@media only screen and (max-width: 560px) {
+  .hero .hero__wrapper {
+    flex-direction: column;
+  }
+  .hero .hero__wrapper .first__hero {
+    width: 100%;
+  }
+  .hero .hero__wrapper .first__hero .hero__text {
+    font-size: 50px;
   }
 }
 .darker__line {

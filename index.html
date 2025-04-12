@@ -97,18 +97,50 @@
               <h2>VOHIDOV SARVARBEK</h2>
             </div>
             <div class="second__links">
-              <a href="./index.html" class="navbar__links">Work</a>
-              <a href="./aboutme.html" class="navbar__links">About</a>
-              <a href="#connect" class="navbar__links">Contact</a>
+              <a href="./index.html" class="navbar__links" id="change_lang_main"
+                >Work</a
+              >
+              <a
+                href="./aboutme.html"
+                class="navbar__links"
+                id="change_lang_main"
+                >About</a
+              >
+              <a href="#connect" class="navbar__links" id="change_lang_main"
+                >Contact</a
+              >
+              <select
+                id="choose__lang"
+                class="navbar__links choose__lang--style"
+              >
+                <option value="en">English</option>
+                <option value="uz">O'zbek</option>
+                <option value="ru">Русский</option>
+              </select>
               <i class="bi bi-list navbar__icon"></i>
             </div>
           </div>
           <div class="links__dropdown">
-            <a href="./index.html" class="navbar__links">Work</a>
+            <a href="./index.html" class="navbar__links" id="change_lang_main"
+              >Work</a
+            >
             <hr />
-            <a href="./aboutme.html" class="navbar__links">About</a>
+            <a href="./aboutme.html" class="navbar__links" id="change_lang_main"
+              >About</a
+            >
             <hr />
-            <a href="#connect" class="navbar__links">Contact</a>
+            <a href="#connect" class="navbar__links" id="change_lang_main"
+              >Contact</a
+            >
+            <hr />
+            <select
+              id="choose__lang2"
+              class="navbar__links choose__lang--style"
+            >
+              <option value="en">English</option>
+              <option value="uz">O'zbek</option>
+              <option value="ru">Русский</option>
+            </select>
           </div>
         </div>
       </div>
@@ -119,20 +151,20 @@
           <div class="hero__wrapper">
             <div class="first__hero">
               <span class="inline-block__holder"
-                ><p class="welcoming__text">WELCOME!</p></span
+                ><p class="welcoming__text change_lang_hero">WELCOME!</p></span
               >
-              <h1 class="hero__text">
+              <h1 class="hero__text change_lang_hero">
                 HI, I AM <br />
                 SARVARBEK VOHIDOV.
               </h1>
-              <p class="small__introduction">
+              <p class="small__introduction change_lang_hero">
                 A front-end developer from Tashkent, Uzbekistan, passionate
                 about creating accessible and user-friendly websites that
                 provide seamless experiences for users.
               </p>
               <div class="contact__divs">
                 <a href="https://t.me/OblivionX_2"
-                  ><button class="hero__contact--btn">
+                  ><button class="hero__contact--btn change_lang_hero">
                     CONTACT ME <i class="bi bi-telegram"></i></button
                 ></a>
                 <a href="mailto:tylertheunknownss@gmail.com"
@@ -154,21 +186,25 @@
       <hr class="darker__line" />
       <div class="container">
         <section class="projects">
-          <h1 class="projects__intro">FEATURED PROJECTS</h1>
-          <p class="projects__details">
+          <h1 class="projects__intro project__lan__change">
+            FEATURED PROJECTS
+          </h1>
+          <p class="projects__details project__lan__change">
             These are some of the projects I completed during my <br />
             front-end learning journey.
           </p>
           <div class="project__wrapper">
             <div class="first__project">
-              <p class="project__status">Conceptual Work</p>
+              <p class="project__status project__lan__change">
+                Conceptual Work
+              </p>
               <img src="./assets/work.png" class="project__img" alt="" />
             </div>
             <div class="second__project">
-              <h3 class="project__title">
+              <h3 class="project__title project__lan__change">
                 Promotional landing page for our favorite show
               </h3>
-              <p class="project__detail">
+              <p class="project__detail project__lan__change">
                 Teamed up with a designer to breathe life into a promotional
                 webpage for our beloved show, Adventure Time. Delivered a fully
                 responsive design with dynamic content capabilities, seamlessly
@@ -177,22 +213,24 @@
               </p>
               <ul class="project__info">
                 <li class="underline__project">
-                  <p class="info__title">PROJECT INFO</p>
+                  <p class="info__title project__lan__change">PROJECT INFO</p>
                 </li>
                 <li class="underline__project">
-                  <p class="info__status">Year</p>
+                  <p class="info__status project__lan__change">Year</p>
                   <p class="info__status2">2023</p>
                 </li>
                 <li class="underline__project">
-                  <p>Role</p>
-                  <p class="info__status2">Front-end Developer</p>
+                  <p class="project__lan__change">Role</p>
+                  <p class="info__status2 project__lan__change">
+                    Front-end Developer
+                  </p>
                 </li>
               </ul>
               <div class="project__links">
-                <a href="" class="project__link"
+                <a href="" class="project__link project__lan__change"
                   >LIVE DEMO <i class="bi bi-arrow-up-right"></i
                 ></a>
-                <a href="" class="project__link"
+                <a href="" class="project__link project__lan__change"
                   >SEE ON GITHUB <i class="bi bi-github"></i
                 ></a>
               </div>
@@ -200,14 +238,21 @@
           </div>
           <div class="project__wrapper">
             <div class="first__project">
-              <p class="project__status">Conceptual Work</p>
-              <img src="./assets/work.png" class="project__img" alt="" />
+              <p class="project__status second__pro__lan__change">
+                Single Work
+              </p>
+              <img
+                src="./assets/car_shop.png"
+                style="border-radius: 10px"
+                class="project__img"
+                alt=""
+              />
             </div>
             <div class="second__project">
-              <h3 class="project__title">
+              <h3 class="project__title second__pro__lan__change">
                 Promotional landing page for our favorite show
               </h3>
-              <p class="project__detail">
+              <p class="project__detail second__pro__lan__change">
                 Teamed up with a designer to breathe life into a promotional
                 webpage for our beloved show, Adventure Time. Delivered a fully
                 responsive design with dynamic content capabilities, seamlessly
@@ -216,22 +261,32 @@
               </p>
               <ul class="project__info">
                 <li class="underline__project">
-                  <p class="info__title">PROJECT INFO</p>
+                  <p class="info__title second__pro__lan__change">
+                    PROJECT INFO
+                  </p>
                 </li>
                 <li class="underline__project">
-                  <p class="info__status">Year</p>
+                  <p class="info__status second__pro__lan__change">Year</p>
                   <p class="info__status2">2023</p>
                 </li>
                 <li class="underline__project">
-                  <p>Role</p>
-                  <p class="info__status2">Front-end Developer</p>
+                  <p class="second__pro__lan__change">Role</p>
+                  <p class="info__status2 second__pro__lan__change">
+                    Front-end Developer
+                  </p>
                 </li>
               </ul>
               <div class="project__links">
-                <a href="" class="project__link"
+                <a
+                  href="https://codingboy112.github.io/Car_shop/"
+                  class="project__link second__pro__lan__change"
+                  target="_blank"
                   >LIVE DEMO <i class="bi bi-arrow-up-right"></i
                 ></a>
-                <a href="" class="project__link"
+                <a
+                  target="_blank"
+                  href="https://github.com/Codingboy112/Car_shop"
+                  class="project__link second__pro__lan__change"
                   >SEE ON GITHUB <i class="bi bi-github"></i
                 ></a>
               </div>
@@ -239,14 +294,16 @@
           </div>
           <div class="project__wrapper">
             <div class="first__project">
-              <p class="project__status">Conceptual Work</p>
+              <p class="project__status third__pro__lang__change">
+                Conceptual Work
+              </p>
               <img src="./assets/work.png" class="project__img" alt="" />
             </div>
             <div class="second__project">
-              <h3 class="project__title">
+              <h3 class="project__title third__pro__lang__change">
                 Promotional landing page for our favorite show
               </h3>
-              <p class="project__detail">
+              <p class="project__detail third__pro__lang__change">
                 Teamed up with a designer to breathe life into a promotional
                 webpage for our beloved show, Adventure Time. Delivered a fully
                 responsive design with dynamic content capabilities, seamlessly
@@ -255,22 +312,26 @@
               </p>
               <ul class="project__info">
                 <li class="underline__project">
-                  <p class="info__title">PROJECT INFO</p>
+                  <p class="info__title third__pro__lang__change">
+                    PROJECT INFO
+                  </p>
                 </li>
                 <li class="underline__project">
-                  <p class="info__status">Year</p>
+                  <p class="info__status third__pro__lang__change">Year</p>
                   <p class="info__status2">2023</p>
                 </li>
                 <li class="underline__project">
-                  <p>Role</p>
-                  <p class="info__status2">Front-end Developer</p>
+                  <p class="third__pro__lang__change">Role</p>
+                  <p class="info__status2 third__pro__lang__change">
+                    Front-end Developer
+                  </p>
                 </li>
               </ul>
               <div class="project__links">
-                <a href="" class="project__link"
+                <a href="" class="project__link third__pro__lang__change"
                   >LIVE DEMO <i class="bi bi-arrow-up-right"></i
                 ></a>
-                <a href="" class="project__link"
+                <a href="" class="project__link third__pro__lang__change"
                   >SEE ON GITHUB <i class="bi bi-github"></i
                 ></a>
               </div>
@@ -378,15 +439,21 @@
         <div class="container">
           <div class="connect__wrapper">
             <div class="first__connect">
-              <h2 class="connect__intro">LET'S CONNECT</h2>
-              <p class="hello__text">
+              <h2 class="connect__intro connect__lan__change">LET'S CONNECT</h2>
+              <p class="hello__text connect__lan__change">
                 Say hello at
                 <a href="mailto:tylertheunknownss@gmail.com"
                   >tylertheunknownss@gmail.com</a
                 >
               </p>
-              <p class="more__info">
-                For more info, here's my <a href="./Vohidov Sarvarbek Resume.docx" id="wordDownload" download>resume</a>
+              <p class="more__info connect__lan__change" >
+                For more info, here's my
+                <a
+                  href="./Vohidov Sarvarbek Resume.docx"
+                  id="wordDownload"
+                  download
+                  >resume</a
+                >
               </p>
               <div class="social__links">
                 <a href="https://t.me/OblivionX_2"
@@ -405,31 +472,34 @@
             </div>
             <div class="second__connect">
               <form action="" id="user__details">
-                <label for="userName">Name</label><br />
+                <label for="userName" class="connect__lan__change">Name</label><br />
                 <input
                   type="text"
                   class="same__inputs"
                   id="userName"
                   placeholder="John Doe"
+                  required
                 /><br />
-                <label for="userEmail">Email</label><br />
+                <label for="userEmail" class="connect__lan__change">Email</label><br />
                 <input
                   type="email"
                   class="same__inputs"
                   id="userEmail"
                   placeholder="example@gmail.com"
+                  required
                 /><br />
-                <label for="userPhone">Phone Number</label><br />
+                <label for="userPhone" class="connect__lan__change">Phone Number</label><br />
                 <input
                   type="number"
                   class="same__inputs"
                   id="userPhone"
                   placeholder="+(998) 99 999 99 99"
+                  required
                 /><br />
-                <label for="userMessage">Message</label><br />
+                <label for="userMessage" class="connect__lan__change">Message</label><br />
                 <textarea id="userMessage" placeholder="Message"></textarea
                 ><br />
-                <button id="submitBtn" type="submit">SUBMIT</button>
+                <button id="submitBtn" type="submit" class="connect__lan__change">SUBMIT</button>
               </form>
             </div>
           </div>
@@ -445,5 +515,6 @@
       </div>
     </footer>
   </body>
-  <script src="app.js"></script>
+  <script src="./indexTranslation.js"></script>
+  <script src="./app.js"></script>
 </html>
