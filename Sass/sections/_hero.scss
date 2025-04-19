@@ -25,6 +25,15 @@
         font-size: 66px;
         font-family: "Bebas Neue", sans-serif;
       }
+      
+      .lang_ru{
+        font-size: 37px;
+        font-weight: 800;
+      }
+      .lang_uz{
+      font-size: 56px;
+      }
+
       .small__introduction {
         color: #c7c7c7;
       }
@@ -71,11 +80,59 @@
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .hero {
     .hero__wrapper {
       .first__hero {
+        .lang_en{
+          font-size: 50px;
+         }
+         .lang_uz{
+          font-size: 45px;
+         }
+         .lang_ru{
+          font-size: 27px;
+         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .hero {
+    .hero__wrapper {
+      gap: 30px;
+      .first__hero {
         width: 100%;
+        .lang_en{
+          font-size: 40px;
+        }
+        .lang_uz{
+          font-size: 35px;
+        }
+      }
+      .second__hero {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    .hero__wrapper {
+      gap: 10px;
+      .first__hero {
+        width: 100%;
+        .lang_en{
+          font-size: 34px;
+        }
+        .contact__divs{
+          .hero__contact--btn{
+            font-size: 13px;
+            padding: 16px 11px;
+          } 
+        }
       }
       .second__hero {
         width: 100%;
@@ -92,9 +149,9 @@
       flex-direction: column;
       .first__hero {
         width: 100%;
-        .hero__text{
-          font-size: 50px;
-        }
+      }
+      .second__hero{
+        margin-top: 30px;
       }
     }
   }

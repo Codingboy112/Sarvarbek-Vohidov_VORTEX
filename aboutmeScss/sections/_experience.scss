@@ -51,10 +51,19 @@
         flex-direction: column;
         .first__experience{
             width: 100%;
+            .experience__intro{
+              font-size: 45px;
+            }
         }
         .second__experience{
             width: 100%;
             margin-top: 40px;
+            .experience__date{
+              font-size: 12px;
+            }
+            .experience__job{
+              font-size: 13px;
+            }
         }
      }
     }

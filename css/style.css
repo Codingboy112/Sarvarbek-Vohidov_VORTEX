@@ -98,7 +98,7 @@ html {
   height: 0px;
   overflow: hidden;
   margin-top: 20px;
-  transition: all 1s;
+  transition: all 0.6s;
 }
 .header .navbar .links__dropdown .navbar__links {
   text-decoration: none;
@@ -165,6 +165,13 @@ html {
   font-size: 66px;
   font-family: "Bebas Neue", sans-serif;
 }
+.hero .hero__wrapper .first__hero .lang_ru {
+  font-size: 37px;
+  font-weight: 800;
+}
+.hero .hero__wrapper .first__hero .lang_uz {
+  font-size: 56px;
+}
 .hero .hero__wrapper .first__hero .small__introduction {
   color: #c7c7c7;
 }
@@ -205,9 +212,47 @@ html {
     border-color: transparent;
   }
 }
+@media only screen and (max-width: 1200px) {
+  .hero .hero__wrapper .first__hero .lang_en {
+    font-size: 50px;
+  }
+  .hero .hero__wrapper .first__hero .lang_uz {
+    font-size: 45px;
+  }
+  .hero .hero__wrapper .first__hero .lang_ru {
+    font-size: 27px;
+  }
+}
 @media only screen and (max-width: 992px) {
+  .hero .hero__wrapper {
+    gap: 30px;
+  }
   .hero .hero__wrapper .first__hero {
     width: 100%;
+  }
+  .hero .hero__wrapper .first__hero .lang_en {
+    font-size: 40px;
+  }
+  .hero .hero__wrapper .first__hero .lang_uz {
+    font-size: 35px;
+  }
+  .hero .hero__wrapper .second__hero {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero .hero__wrapper {
+    gap: 10px;
+  }
+  .hero .hero__wrapper .first__hero {
+    width: 100%;
+  }
+  .hero .hero__wrapper .first__hero .lang_en {
+    font-size: 34px;
+  }
+  .hero .hero__wrapper .first__hero .contact__divs .hero__contact--btn {
+    font-size: 13px;
+    padding: 16px 11px;
   }
   .hero .hero__wrapper .second__hero {
     width: 100%;
@@ -220,8 +265,8 @@ html {
   .hero .hero__wrapper .first__hero {
     width: 100%;
   }
-  .hero .hero__wrapper .first__hero .hero__text {
-    font-size: 50px;
+  .hero .hero__wrapper .second__hero {
+    margin-top: 30px;
   }
 }
 .darker__line {
@@ -235,6 +280,12 @@ html {
 .projects .projects__intro {
   font-family: "Bebas Neue", sans-serif;
   font-size: 55px;
+}
+.projects .lang_ru {
+  font-size: 45px;
+}
+.projects .lang_uz {
+  font-size: 50px;
 }
 .projects .projects__details {
   font-family: sans-serif;
@@ -313,15 +364,36 @@ html {
 }
 
 @media only screen and (max-width: 992px) {
+  .projects .lang_ru {
+    font-size: 40px;
+  }
   .projects .project__wrapper {
     flex-direction: column;
     margin-top: 60px;
+    padding: 10px;
+    gap: 14px;
+    margin-top: 80px;
   }
   .projects .project__wrapper .first__project {
     width: 100%;
   }
   .projects .project__wrapper .second__project {
     width: 100%;
+    margin-top: 0;
+  }
+  .projects .project__wrapper .second__project .project__links {
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 497px) {
+  .projects .lang_ru {
+    font-size: 30px;
+  }
+  .projects .lang_uz {
+    font-size: 42px;
+  }
+  .projects .project__wrapper .second__project .project__links .project__link {
+    font-size: 12px;
   }
 }
 .aboutme {
@@ -337,8 +409,12 @@ html {
   margin-top: 40px;
 }
 .aboutme .aboutme__wrapper .first__aboutme .aboutme__intro {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", sans-serif;
   font-size: 56px;
+}
+.aboutme .aboutme__wrapper .first__aboutme .lang_ru {
+  font-size: 50px;
+  font-weight: 900;
 }
 .aboutme .aboutme__wrapper .first__aboutme .aboutme__main {
   font-size: 34px;
@@ -407,6 +483,7 @@ html {
   display: flex;
   justify-content: space-between;
   font-family: sans-serif;
+  gap: 20px;
 }
 .connect .connect__wrapper .first__connect {
   width: 50%;
@@ -415,6 +492,10 @@ html {
   font-family: "Bebas Neue", sans-serif;
   font-size: 60px;
   font-weight: 300;
+}
+.connect .connect__wrapper .first__connect .lang_ru {
+  font-size: 40px;
+  font-weight: 700;
 }
 .connect .connect__wrapper .first__connect .hello__text {
   color: #C7C7C7;
@@ -494,6 +575,7 @@ html {
   border: none;
   background-color: #D3E97A;
   font-weight: 600;
+  color: black;
 }
 
 @media only screen and (max-width: 992px) {
@@ -506,6 +588,11 @@ html {
   .connect .connect__wrapper .second__connect {
     width: 100%;
     margin-top: 60px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .connect .connect__wrapper .first__connect .lang_ru {
+    font-size: 30px;
   }
 }
 .footer {

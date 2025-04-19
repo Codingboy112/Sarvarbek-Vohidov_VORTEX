@@ -1,123 +1,139 @@
-const translations = {
-  en: {
-    work: "Work",
-    about: "About",
-    contact: "Contact",
-    welcome: "WELCOME!",
-    nameText: "HI, I AM <br /> SARVARBEK VOHIDOV.",
-    heroIntro:
-      "A front-end developer from Tashkent, Uzbekistan, passionate about creating accessible and user-friendly websites that provide seamless experiences for users.",
-    heroContact: `CONTACT ME <i class="bi bi-telegram"></i>`,
-    featured: "FEATURED PROJECTS",
-    featuredIntro:
-      "These are some of the projects I completed during my <br /> front-end learning journey.",
-    featuredStatus: "Conceptual Work",
-    featuredProTitle: "Promotional landing page for our favorite show",
-    featuredProDetail:
-      "Teamed up with a designer to breathe life into a promotionalwebpage for our beloved show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated with the latest adventures.",
-    featuredTextInfo: "PROJECT INFO",
-    featuredTextYear: "Year",
-    featuredTextRole: "Role",
-    featuredTextFront: "Front-end Developer",
-    featuredTextLive: `LIVE DEMO <i class="bi bi-arrow-up-right">`,
-    featuredTextSee: `SEE ON GITHUB <i class="bi bi-github"></i>`,
-    secondProStatus: `Single Work`,
-    secondProTitle: "Promotional landing page for our favorite show",
-    secondProDetail:
-      "Teamed up with a designer to breathe life into a promotionalwebpage for our beloved show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated with the latest adventures.",
+import { translations, fetchTextArray } from './indexTranslations.js';
 
-    thirdProStatus: `School Work`,
-    thirdProTitle: `Promotional landing page for our favorite show`,
-    thirdProDetail: `Teamed up with a designer to breathe life into a promotional webpage for our beloved show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated with the latest adventures.`,
+let indexTranslations = {}; 
 
-    connectIntro: `LET'S CONNECT`,
-    connectText: `Say hello at <a href="mailto:tylertheunknownss@gmail.com" class="connect__lan__change">tylertheunknownss@gmail.com</a>`,
-    connectInfoText: `For more info, here's my <a href="./Vohidov Sarvarbek Resume.docx" id="wordDownload" download class="connect__lan__change">resume</a>`,
-    connectTextName: `Name`,
-    connectTextEmail: `Email`,
-    connectTextPhone: `Phone Number`,
-    connectTextMessage: `Message`,
-    connectTextSubmit: `SUBMIT`,
-  },
-  uz: {
-    work: "Asosiy",
-    about: "Men haqimda",
-    contact: "Murojat qilish",
-    welcome: "XUSH KELIBSIZ!",
-    nameText: `SALOM, MEN <br /> SARVARBEK VOHIDOVMAN.`,
-    heroIntro:
-      "Foydalanuvchi uchun qulay va hamma uchun ochiq veb-saytlar yaratishga ishtiyoqmand bo‘lgan, Toshkentdan front-end dasturchi.",
-    heroContact: `BOGLANISH <i class="bi bi-telegram"></i>`,
-    featured: "TANLANGAN LOYIHALAR",
-    featuredIntro:
-      "Quyidagilar — front-end o‘rganish jarayonida <br /> bajargan loyihalarimdan ayrimlari.",
-    featuredStatus: "Jamaviy ish",
-    featuredProTitle: "Sevimli shouimiz uchun reklama sahifasi",
-    featuredProDetail:
-      "Dizayner bilan hamkorlikda sevimli shouimiz — Adventure Time uchun reklama sahifasini yaratdik. Sahifa to‘liq moslashuvchan va dinamik kontent imkoniyatlariga ega bo‘lib, yangiliklarga obuna bo‘lish funksiyasi orqali muxlislarni doimiy xabardor qilishga xizmat qiladi.",
-    featuredTextInfo: "LOYIHA MA'LUMOTI",
-    featuredTextYear: "Yil",
-    featuredTextRole: "Rol",
-    featuredTextFront: "Front-end dasturchi",
-    featuredTextLive: `LIVE DEMO <i class="bi bi-arrow-up-right">`,
-    featuredTextSee: `GITHUB'DA KO‘RISH <i class="bi bi-github"></i>`,
-    secondProStatus: "Yakka ish",
-    secondProTitle: "Sevimli shouimiz uchun reklama sahifasi",
-    secondProDetail:
-      "Dizayner bilan hamkorlikda sevimli shouimiz — Adventure Time uchun reklama sahifasini yaratdik. Sahifa to‘liq moslashuvchan va dinamik kontent imkoniyatlariga ega bo‘lib, yangiliklarga obuna funksiyasi bilan muxlislarni doimiy xabardor qilib turadi.",
-    thirdProStatus: "Maktab ishi",
-    thirdProTitle: "Sevimli shouimiz uchun reklama sahifasi",
-    thirdProDetail:
-      "Dizayner bilan hamkorlikda sevimli shouimiz — Adventure Time uchun reklama sahifasini yaratdik. U to‘liq moslashuvchan dizayn, dinamik kontent imkoniyatlari va muxlislarni so‘nggi sarguzashtlar bilan doimiy xabardor qilib turuvchi obuna funksiyasi bilan to‘ldirilgan.",
+let textArray = document.querySelectorAll('#change_lang_main');
+let changeHeroLang = document.querySelectorAll('.change_lang_hero');
+let projectLan = document.querySelectorAll('.project__lan__change');
+let secondProLan = document.querySelectorAll('.second__pro__lan__change');
+let thirdProLan = document.querySelectorAll('.third__pro__lang__change');
+let changeAboutLang = document.querySelectorAll('.aboutSection_lang');
+let connectLan = document.querySelectorAll('.connect__lan__change');
+const languageSelect = document.querySelector("#choose__lang");
+const languageSelect2 = document.querySelector("#choose__lang2");
 
-    connectIntro: "BOG'LANISH",
-    connectText: `Salom yozing: <a href="mailto:tylertheunknownss@gmail.com" class="connect__lan__change">tylertheunknownss@gmail.com</a>`,
-    connectInfoText: `Qo‘shimcha ma’lumot uchun mening <a href="./Vohidov Sarvarbek Resume.docx" id="wordDownload" download class="connect__lan__change">rezyumem</a> bilan tanishing`,
-    connectTextName: "Ism",
-    connectTextEmail: "Email",
-    connectTextPhone: "Telefon raqami",
-    connectTextMessage: "Xabar",
-    connectTextSubmit: "YUBORISH",
-  },
+// Make sure translations are loaded before calling changeLanguage
+async function changeLanguage(lang, changeLang) {
+  if (Object.keys(translations).length === 0) {
+    console.error("Translations are not loaded yet!");
+    return;
+  }
+  
+  const langTranslations = translations[lang];  // Renamed to avoid confusion
+  if (!langTranslations) {
+    console.error(`Translations not found for language: ${lang}`);
+    return;
+  }
 
-  ru: {
-    work: "Главная",
-    about: "Обо мне",
-    contact: "Контакт",
-    welcome: "ДОБРО ПОЖАЛОВАТЬ!",
-    nameText: "ПРИВЕТ, Я <br /> САРВАРБЕК ВОХИДОВ.",
-    heroIntro:
-      "Фронтенд-разработчик из Ташкента, Узбекистан, увлечён созданием доступных и удобных для пользователя веб-сайтов, обеспечивающих безупречный пользовательский опыт.",
-    heroContact: `Контакт <i class="bi bi-telegram"></i>`,
-    featured: "ИЗБРАННЫЕ ПРОЕКТЫ",
-    featuredIntro:
-      "Это некоторые из проектов, которые я завершил в процессе <br /> изучения фронтенда.",
-    featuredStatus: "Концептуальная работа",
-    featuredProTitle: "Рекламная лендинг-страница для нашего любимого шоу",
-    featuredProDetail:
-      "Совместно с дизайнером создали рекламную веб-страницу для нашего любимого шоу — Adventure Time. Реализован полностью адаптивный дизайн с возможностью динамического контента и интеграцией функции подписки на новости, чтобы поклонники всегда были в курсе новых приключений.",
-    featuredTextInfo: "ИНФОРМАЦИЯ О ПРОЕКТЕ",
-    featuredTextYear: "Год",
-    featuredTextRole: "Роль",
-    featuredTextFront: "Фронтенд-разработчик",
-    featuredTextLive: `ПРОСМОТР ДЕМО <i class="bi bi-arrow-up-right">`,
-    featuredTextSee: `СМОТРЕТЬ НА GITHUB <i class="bi bi-github"></i>`,
-    secondProStatus: "Индивидуальная работа",
-    secondProTitle: "Рекламная лендинг-страница для нашего любимого шоу",
-    secondProDetail:
-      "Совместно с дизайнером создали рекламную веб-страницу для нашего любимого шоу — Adventure Time. Реализован полностью адаптивный дизайн с возможностью динамического контента и интеграцией функции подписки на новости, чтобы поклонники всегда были в курсе новых приключений.",
-    thirdProStatus: "Школьная работа",
-    thirdProTitle: "Рекламная лендинг-страница для нашего любимого шоу",
-    thirdProDetail:
-      "Совместно с дизайнером создали рекламную веб-страницу для нашего любимого шоу — Adventure Time. Реализован полностью адаптивный дизайн с возможностью динамического контента и интеграцией функции подписки на новости, чтобы поклонники всегда были в курсе новых приключений.",
+  // Header
+  textArray[0].textContent = langTranslations.work;
+  textArray[1].textContent = langTranslations.about;
+  textArray[2].textContent = langTranslations.contact;
+  textArray[3].textContent = langTranslations.work;
+  textArray[4].textContent = langTranslations.about;
+  textArray[5].textContent = langTranslations.contact;
 
-    connectIntro: "ДАВАЙТЕ СВЯЖЕМСЯ",
-    connectText: `Поздоровайтесь по адресу <a href="mailto:tylertheunknownss@gmail.com" class="connect__lan__change">tylertheunknownss@gmail.com</a>`,
-    connectInfoText: `Для получения дополнительной информации посмотрите моё <a href="./Vohidov Sarvarbek Resume.docx" id="wordDownload" download class="connect__lan__change">резюме</a>`,
-    connectTextName: "Имя",
-    connectTextEmail: "Эл. почта",
-    connectTextPhone: "Номер телефона",
-    connectTextMessage: "Сообщение",
-    connectTextSubmit: "ОТПРАВИТЬ",
-  },
-};
+  // Hero
+  changeHeroLang[0].textContent = langTranslations.welcome;
+  changeHeroLang[1].innerHTML = langTranslations.nameText;
+  changeLang(changeHeroLang[1], lang);
+  changeHeroLang[2].textContent = langTranslations.heroIntro;
+  changeHeroLang[3].innerHTML = langTranslations.heroContact;
+
+  // First Project
+  projectLan[0].innerText = langTranslations.featured;
+  changeLang(projectLan[0], lang);
+  projectLan[1].innerHTML = langTranslations.featuredIntro;
+  projectLan[2].innerHTML = langTranslations.featuredStatus;
+  projectLan[3].innerHTML = langTranslations.featuredProTitle;
+  projectLan[4].innerHTML = langTranslations.featuredProDetail;
+  projectLan[5].innerHTML = langTranslations.featuredTextInfo;
+  projectLan[6].innerHTML = langTranslations.featuredTextYear;
+  projectLan[7].innerHTML = langTranslations.featuredTextRole;
+  projectLan[8].innerHTML = langTranslations.featuredTextFront;
+  projectLan[9].innerHTML = langTranslations.featuredTextLive;
+  projectLan[10].innerHTML = langTranslations.featuredTextSee;
+
+  // Second Project
+  secondProLan[0].innerHTML = langTranslations.secondProStatus;
+  secondProLan[1].innerHTML = langTranslations.secondProTitle;
+  secondProLan[2].innerHTML = langTranslations.secondProDetail;
+  secondProLan[3].innerHTML = langTranslations.featuredTextInfo;
+  secondProLan[4].innerHTML = langTranslations.featuredTextYear;
+  secondProLan[5].innerHTML = langTranslations.featuredTextRole;
+  secondProLan[6].innerHTML = langTranslations.featuredTextFront;
+  secondProLan[7].innerHTML = langTranslations.featuredTextLive;
+  secondProLan[8].innerHTML = langTranslations.featuredTextSee;
+
+  // Third Project
+  thirdProLan[0].innerHTML = langTranslations.thirdProStatus;
+  thirdProLan[1].innerHTML = langTranslations.thirdProTitle;
+  thirdProLan[2].innerHTML = langTranslations.thirdProDetail;
+  thirdProLan[3].innerHTML = langTranslations.featuredTextInfo;
+  thirdProLan[4].innerHTML = langTranslations.featuredTextYear;
+  thirdProLan[5].innerHTML = langTranslations.featuredTextRole;
+  thirdProLan[6].innerHTML = langTranslations.featuredTextFront;
+  thirdProLan[7].innerHTML = langTranslations.featuredTextLive;
+  thirdProLan[8].innerHTML = langTranslations.featuredTextSee;
+
+  // About Section
+  changeAboutLang[0].innerHTML = langTranslations.aboutMeIntro;
+  changeLang(changeAboutLang[0], lang);
+  changeAboutLang[1].innerHTML = langTranslations.aboutBigText;
+  changeAboutLang[2].innerHTML = langTranslations.aboutSmallText;
+  changeAboutLang[3].innerHTML = langTranslations.aboutLinkText;
+  changeAboutLang[4].innerHTML = langTranslations.aboutSkills;
+
+  // Connect Section
+  connectLan[0].innerHTML = langTranslations.connectIntro;
+  changeLang(connectLan[0], lang);
+  connectLan[1].innerHTML = langTranslations.connectText;
+  connectLan[2].innerHTML = langTranslations.connectInfoText;
+  connectLan[3].innerHTML = langTranslations.connectTextName;
+  connectLan[4].innerHTML = langTranslations.connectTextEmail;
+  connectLan[6].innerHTML = langTranslations.connectTextMessage;
+  connectLan[7].innerHTML = langTranslations.connectTextSubmit;
+}
+
+fetchTextArray().then(() => {
+  // Now that translations are loaded, assign them to indexTranslations
+  Object.entries(translations).forEach(([lang, translation]) => {
+    indexTranslations[lang] = translation;
+  });
+
+  console.log('✅ Translations successfully assigned to indexTranslations:', indexTranslations);
+
+  const savedLang = localStorage.getItem("language");
+
+  function setLangClass(elements, lang) {
+    if (!elements) return;
+    const elList = Array.isArray(elements) ? elements : [elements];
+    elList.forEach(el => {
+      for (let cls of el.classList) {
+        if (cls.startsWith("lang_")) el.classList.remove(cls);
+      }
+      el.classList.add(`lang_${lang}`);
+    });
+  }
+
+  // Call changeLanguage only after translations are loaded
+  if (savedLang) {
+    languageSelect.value = savedLang;
+    languageSelect2.value = savedLang;
+    changeLanguage(savedLang, setLangClass);
+  }
+
+  languageSelect.addEventListener("change", () => {
+    const selectedLang = languageSelect.value;
+    changeLanguage(selectedLang, setLangClass);
+    languageSelect2.value = selectedLang;
+    localStorage.setItem("language", selectedLang);
+  });
+
+  languageSelect2.addEventListener("change", () => {
+    const selectedLang = languageSelect2.value;
+    changeLanguage(selectedLang, setLangClass);
+    languageSelect.value = selectedLang;
+    localStorage.setItem("language", selectedLang);
+  });
+});

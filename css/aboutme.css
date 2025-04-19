@@ -108,7 +108,7 @@ html {
 }
 
 .links__dropdown--active {
-  height: 170px !important;
+  height: 230px !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -150,7 +150,7 @@ html {
   margin-top: 40px;
 }
 .aboutme .aboutme__wrapper .first__aboutme .aboutme__intro {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", sans-serif;
   font-size: 56px;
 }
 .aboutme .aboutme__wrapper .first__aboutme .aboutme__main {
@@ -294,7 +294,7 @@ html {
   width: 50%;
 }
 .capabilities .capabilities__wrapper .first__capability .capability__intro {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", sans-serif;
   font-size: 54px;
 }
 .capabilities .capabilities__wrapper .second__capability {
@@ -324,15 +324,17 @@ html {
   border: 2px solid white;
 }
 
+@media only screen and (max-width: 992px) {
+  .capabilities .capabilities__wrapper .first__capability .capability__intro {
+    font-size: 44px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .capabilities .capabilities__wrapper {
     flex-direction: column;
   }
   .capabilities .capabilities__wrapper .first__capability {
     width: 100%;
-  }
-  .capabilities .capabilities__wrapper .first__capability .capability__intro {
-    font-size: 44px;
   }
   .capabilities .capabilities__wrapper .second__capability {
     width: 100%;
@@ -395,9 +397,18 @@ html {
   .experience .experience__wrapper .first__experience {
     width: 100%;
   }
+  .experience .experience__wrapper .first__experience .experience__intro {
+    font-size: 45px;
+  }
   .experience .experience__wrapper .second__experience {
     width: 100%;
     margin-top: 40px;
+  }
+  .experience .experience__wrapper .second__experience .experience__date {
+    font-size: 12px;
+  }
+  .experience .experience__wrapper .second__experience .experience__job {
+    font-size: 13px;
   }
 }
 .connect {
@@ -407,6 +418,7 @@ html {
   display: flex;
   justify-content: space-between;
   font-family: sans-serif;
+  gap: 20px;
 }
 .connect .connect__wrapper .first__connect {
   width: 50%;
@@ -415,6 +427,10 @@ html {
   font-family: "Bebas Neue", sans-serif;
   font-size: 60px;
   font-weight: 300;
+}
+.connect .connect__wrapper .first__connect .lang_ru {
+  font-size: 40px;
+  font-weight: 700;
 }
 .connect .connect__wrapper .first__connect .hello__text {
   color: #C7C7C7;
@@ -494,6 +510,7 @@ html {
   border: none;
   background-color: #D3E97A;
   font-weight: 600;
+  color: black;
 }
 
 @media only screen and (max-width: 992px) {
@@ -506,6 +523,11 @@ html {
   .connect .connect__wrapper .second__connect {
     width: 100%;
     margin-top: 60px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .connect .connect__wrapper .first__connect .lang_ru {
+    font-size: 30px;
   }
 }
 .footer {
