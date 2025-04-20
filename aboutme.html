@@ -52,15 +52,7 @@
         gap: 60px;
       }
     </style>
-    <script defer>
-      window.addEventListener("load", function () {
-        const preloader = document.getElementById("preloader");
-        preloader.style.opacity = "0";
-        setTimeout(() => {
-          preloader.style.display = "none";
-        }, 500);
-      });
-    </script>
+
     <link rel="stylesheet" href="./css/aboutme.css" />
     <link rel="icon" href="./assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -361,4 +353,26 @@
   <script src="app.js"></script>
   <script src="translations.js" type="module"></script>
   <script src="translationAbout.js" type="module"></script>
+  <!-- <script type="module">
+    
+    import { translations, fetchTextArray } from './indexTranslations.js';
+    
+    async function initPage() {
+      const preloader = document.getElementById('preloader');
+    
+      await fetchTextArray();
+    
+      if (preloader) {
+        preloader.style.transition = 'opacity 0.5s ease';
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 500);
+      }
+    
+    }
+    
+    window.addEventListener('DOMContentLoaded', initPage);
+    
+  </script> -->
 </html>

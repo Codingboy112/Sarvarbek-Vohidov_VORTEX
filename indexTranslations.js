@@ -14,25 +14,24 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// In indexTranslations.js
-let translations = {}; // Updated name to reflect the change
+let translations = {}; 
 
 async function fetchTextArray() {
-  const docRef = doc(db, "translations", "translations"); // Change to "translations"
+  const docRef = doc(db, "translations", "translations");
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
     const data = docSnap.data().index;
 
-    // Check if 'text' exists and is not undefined
+
     if (data) {
       try {
-        translations = JSON.parse(data); // Try parsing the text field
+        translations = JSON.parse(data); 
         console.log('✅ Translations loaded:', translations);
       } catch (error) {
         console.log("❌ Error parsing JSON:", error);
       }
-    } else {
+    }     else {
       console.log("❌ 'text' field is empty or undefined.");
     }
   } else {
@@ -41,4 +40,4 @@ async function fetchTextArray() {
   }
 }
 
-export { translations, fetchTextArray }; // Export translations here
+export { translations, fetchTextArray }; 

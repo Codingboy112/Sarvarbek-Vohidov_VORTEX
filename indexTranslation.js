@@ -12,14 +12,14 @@ let connectLan = document.querySelectorAll('.connect__lan__change');
 const languageSelect = document.querySelector("#choose__lang");
 const languageSelect2 = document.querySelector("#choose__lang2");
 
-// Make sure translations are loaded before calling changeLanguage
+
 async function changeLanguage(lang, changeLang) {
   if (Object.keys(translations).length === 0) {
     console.error("Translations are not loaded yet!");
     return;
   }
   
-  const langTranslations = translations[lang];  // Renamed to avoid confusion
+  const langTranslations = translations[lang]; 
   if (!langTranslations) {
     console.error(`Translations not found for language: ${lang}`);
     return;
@@ -96,7 +96,6 @@ async function changeLanguage(lang, changeLang) {
 }
 
 fetchTextArray().then(() => {
-  // Now that translations are loaded, assign them to indexTranslations
   Object.entries(translations).forEach(([lang, translation]) => {
     indexTranslations[lang] = translation;
   });
@@ -116,7 +115,6 @@ fetchTextArray().then(() => {
     });
   }
 
-  // Call changeLanguage only after translations are loaded
   if (savedLang) {
     languageSelect.value = savedLang;
     languageSelect2.value = savedLang;
