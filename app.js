@@ -5,6 +5,8 @@ let elName = document.querySelector("#userName");
 let elEmail = document.querySelector("#userEmail");
 let elNumber = document.querySelector("#userPhone");
 let userMessage = document.querySelector("#userMessage");
+let toTop = document.querySelector('.toTop');
+
 
 
 navbarBtn.addEventListener("click", () => {
@@ -18,8 +20,6 @@ elForm.addEventListener("submit", (event) => {
   const chatId = "6959013020";
 
   let telegramSend = `New People 🌎\n\nUsername: ${elName.value}\nEmail: ${elEmail.value}\nPhone Number: ${elNumber.value}\nMessage: ${userMessage.value}`;
-
-  
 
   const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${telegramSend}`;
 
@@ -46,3 +46,27 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY < lastScrollY) {
+    toTop.style.bottom = "50px"
+  } else if (currentScrollY > lastScrollY) {
+    toTop.style.bottom = "-100px"
+  }
+ 
+  lastScrollY = currentScrollY;
+});
+
+
+toTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const scrollCheck = setInterval(() => {
+    if (window.scrollY === 0) {
+      toTop.style.bottom = "-100px";
+      clearInterval(scrollCheck);
+    }
+  }, 50); 
+});

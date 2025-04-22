@@ -24,6 +24,27 @@ html {
   scroll-behavior: smooth;
 }
 
+.toTop {
+  position: fixed;
+  bottom: -100px;
+  transition: all 0.2s;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33px;
+  right: 50px;
+  background-color: #D3E97A;
+  color: #0A0A0A;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.toTop:hover {
+  background-color: #8a9850;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;

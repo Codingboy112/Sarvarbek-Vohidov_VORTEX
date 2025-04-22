@@ -15,11 +15,40 @@ body{
   color: #0A0A0A;
 }
 
-
 html{
   scroll-behavior: smooth;
 }
 
+.toTop{
+  position: fixed;
+  bottom: -100px;
+  transition: all .2s;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33px;
+  right: 50px;
+  background-color: #D3E97A;
+  color: #0A0A0A;
+  border-radius: 50%;
+  z-index: 1000;
+  box-shadow: 0 0 5px #D3E97A, 0 0 5px #D3E97A, 0 0 5px #D3E97A;
+}
+
+ .toTop:hover{
+  background-color: #8a9850;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .toTop{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
 
 .container {
     width: 100%;

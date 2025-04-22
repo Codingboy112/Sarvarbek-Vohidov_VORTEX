@@ -52,8 +52,7 @@
         gap: 60px;
       }
     </style>
-    <script defer>
-    </script>
+    <script defer></script>
 
     <link rel="icon" href="./assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -81,8 +80,13 @@
     </div>
 
     <!-- Portfolio starts here -->
+    <a href="#header" class="hoverThing">
+      <div class="toTop">
+        <i class="bi bi-arrow-up"></i>
+      </div>
+    </a>
 
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="navbar">
           <div class="navbar__wrapper">
@@ -352,7 +356,9 @@
                 enjoy playing football, photography and playing Valorant.
                 Learning more to improve skill.
               </p>
-              <a href="./aboutme.html" class="aboutme__link aboutSection_lang">MORE ABOUT ME</a>
+              <a href="./aboutme.html" class="aboutme__link aboutSection_lang"
+                >MORE ABOUT ME</a
+              >
             </div>
             <div class="second__aboutme">
               <p class="skill__intro aboutSection_lang">My skills</p>
@@ -439,7 +445,7 @@
                   >tylertheunknownss@gmail.com</a
                 >
               </p>
-              <p class="more__info connect__lan__change" >
+              <p class="more__info connect__lan__change">
                 For more info, here's my
                 <a
                   href="./Vohidov Sarvarbek Resume.docx"
@@ -465,7 +471,8 @@
             </div>
             <div class="second__connect">
               <form action="" id="user__details">
-                <label for="userName" class="connect__lan__change">Name</label><br />
+                <label for="userName" class="connect__lan__change">Name</label
+                ><br />
                 <input
                   type="text"
                   class="same__inputs"
@@ -473,7 +480,8 @@
                   placeholder="John Doe"
                   required
                 /><br />
-                <label for="userEmail" class="connect__lan__change">Email</label><br />
+                <label for="userEmail" class="connect__lan__change">Email</label
+                ><br />
                 <input
                   type="email"
                   class="same__inputs"
@@ -481,7 +489,9 @@
                   placeholder="example@gmail.com"
                   required
                 /><br />
-                <label for="userPhone" class="connect__lan__change">Phone Number</label><br />
+                <label for="userPhone" class="connect__lan__change"
+                  >Phone Number</label
+                ><br />
                 <input
                   type="number"
                   class="same__inputs"
@@ -489,10 +499,18 @@
                   placeholder="+(998) 99 999 99 99"
                   required
                 /><br />
-                <label for="userMessage" class="connect__lan__change">Message</label><br />
+                <label for="userMessage" class="connect__lan__change"
+                  >Message</label
+                ><br />
                 <textarea id="userMessage" placeholder="Message"></textarea
                 ><br />
-                <button id="submitBtn" type="submit" class="connect__lan__change">SUBMIT</button>
+                <button
+                  id="submitBtn"
+                  type="submit"
+                  class="connect__lan__change"
+                >
+                  SUBMIT
+                </button>
               </form>
             </div>
           </div>
@@ -512,25 +530,22 @@
   <script src="./indexTranslations.js" type="module"></script>
   <script src="./indexTranslation.js" type="module"></script>
   <script type="module">
-    
-import { translations, fetchTextArray } from './indexTranslations.js';
+    import { translations, fetchTextArray } from "./indexTranslations.js";
 
-async function initPage() {
-  const preloader = document.getElementById('preloader');
+    async function initPage() {
+      const preloader = document.getElementById("preloader");
 
-  await fetchTextArray();
+      await fetchTextArray();
 
-  if (preloader) {
-    preloader.style.transition = 'opacity 0.5s ease';
-    preloader.style.opacity = '0';
-    setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 500);
-  }
+      if (preloader) {
+        preloader.style.transition = "opacity 0.5s ease";
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 500);
+      }
+    }
 
-}
-
-window.addEventListener('DOMContentLoaded', initPage);
-
-    </script>
+    window.addEventListener("DOMContentLoaded", initPage);
+  </script>
 </html>
