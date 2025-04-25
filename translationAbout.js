@@ -83,11 +83,11 @@ function changeLanguage(lang, changeLang) {
   connectLan[6].innerHTML = trans.connectTextMessage;
   connectLan[7].innerHTML = trans.connectTextSubmit;
 
-  // Change Language Class (if needed)
+  
   changeLang(connectLan[0], lang);
 }
 
-// Set Language Class on Elements
+
 function setLangClass(elements, lang) {
   const elList = elements.length ? elements : [elements];
   elList.forEach(el => {
@@ -98,7 +98,7 @@ function setLangClass(elements, lang) {
   });
 }
 
-// Language Change Event
+
 languageSelect.addEventListener("change", function () {
   const selectedLang = languageSelect.value;
   changeLanguage(selectedLang, setLangClass);

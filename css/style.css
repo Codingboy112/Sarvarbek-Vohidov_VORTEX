@@ -39,10 +39,12 @@ html {
   color: #0A0A0A;
   border-radius: 50%;
   z-index: 1000;
+  box-shadow: 0 0 5px #D3E97A, 0 0 5px #D3E97A, 0 0 5px #D3E97A;
 }
 
 .toTop:hover {
   background-color: #8a9850;
+  box-shadow: 0 0 5px #7d8a4a, 0 0 5px #707b42, 0 0 5px #6d7840;
 }
 
 .container {

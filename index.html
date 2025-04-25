@@ -53,7 +53,6 @@
       }
     </style>
     <script defer></script>
-
     <link rel="icon" href="./assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" href="./Icon.svg" />
@@ -183,21 +182,21 @@
       <hr class="darker__line" />
       <div class="container">
         <section class="projects">
-          <h1 class="projects__intro project__lan__change">
+          <h1 class="projects__intro project__lan__change" data-aos="fade-up">
             FEATURED PROJECTS
           </h1>
-          <p class="projects__details project__lan__change">
+          <p class="projects__details project__lan__change" data-aos="fade-up">
             These are some of the projects I completed during my <br />
             front-end learning journey.
           </p>
           <div class="project__wrapper">
-            <div class="first__project">
+            <div class="first__project" data-aos="fade-up">
               <p class="project__status project__lan__change">
                 Conceptual Work
               </p>
               <img src="./assets/work.png" class="project__img" alt="" />
             </div>
-            <div class="second__project">
+            <div class="second__project" data-aos="fade-right">
               <h3 class="project__title project__lan__change">
                 Promotional landing page for our favorite show
               </h3>
@@ -234,7 +233,7 @@
             </div>
           </div>
           <div class="project__wrapper">
-            <div class="first__project">
+            <div class="first__project" data-aos="fade-up">
               <p class="project__status second__pro__lan__change">
                 Single Work
               </p>
@@ -245,7 +244,7 @@
                 alt=""
               />
             </div>
-            <div class="second__project">
+            <div class="second__project" data-aos="fade-right">
               <h3 class="project__title second__pro__lan__change">
                 Promotional landing page for our favorite show
               </h3>
@@ -290,13 +289,13 @@
             </div>
           </div>
           <div class="project__wrapper">
-            <div class="first__project">
+            <div class="first__project" data-aos="fade-up">
               <p class="project__status third__pro__lang__change">
                 Conceptual Work
               </p>
               <img src="./assets/work.png" class="project__img" alt="" />
             </div>
-            <div class="second__project">
+            <div class="second__project" data-aos="fade-right">
               <h3 class="project__title third__pro__lang__change">
                 Promotional landing page for our favorite show
               </h3>
@@ -341,13 +340,15 @@
         <section class="aboutme">
           <div class="aboutme__wrapper">
             <div class="first__aboutme">
-              <h2 class="aboutme__intro aboutSection_lang">ABOUT ME</h2>
+              <h2 class="aboutme__intro aboutSection_lang" data-aos="fade-up">
+                ABOUT ME
+              </h2>
 
-              <p class="aboutme__main aboutSection_lang">
+              <p class="aboutme__main aboutSection_lang" data-aos="fade-up">
                 I am a front-end developer born in Uzbekistan. I have a
                 problem-solving and communicating skills.
               </p>
-              <p class="aboutme__small aboutSection_lang">
+              <p class="aboutme__small aboutSection_lang" data-aos="fade-up">
                 I am a front-end developer based in Sydney looking for exciting
                 opportunities. Has Mechanical Engineering background. Likes to
                 focus on accessibility when developing. Passionate and curious
@@ -361,9 +362,11 @@
               >
             </div>
             <div class="second__aboutme">
-              <p class="skill__intro aboutSection_lang">My skills</p>
+              <p class="skill__intro aboutSection_lang" data-aos="fade-up">
+                My skills
+              </p>
               <div class="skill__container--holder">
-                <div class="skill__container">
+                <div class="skill__container" data-aos="fade-up">
                   <div class="skill">
                     <img
                       src="./assets/icons8-html5-96.png"
@@ -438,23 +441,31 @@
         <div class="container">
           <div class="connect__wrapper">
             <div class="first__connect">
-              <h2 class="connect__intro connect__lan__change">LET'S CONNECT</h2>
-              <p class="hello__text connect__lan__change">
-                Say hello at
-                <a href="mailto:tylertheunknownss@gmail.com"
-                  >tylertheunknownss@gmail.com</a
-                >
-              </p>
-              <p class="more__info connect__lan__change">
-                For more info, here's my
-                <a
-                  href="./Vohidov Sarvarbek Resume.docx"
-                  id="wordDownload"
-                  download
-                  >resume</a
-                >
-              </p>
-              <div class="social__links">
+              <h2
+                class="connect__intro connect__lan__change"
+                data-aos="fade-up"
+              >
+                LET'S CONNECT
+              </h2>
+              <div data-aos="fade-right">
+                <p class="hello__text connect__lan__change">
+                  Say hello at
+                  <a href="mailto:tylertheunknownss@gmail.com"
+                    >tylertheunknownss@gmail.com</a
+                  >
+                </p>
+                <p class="more__info connect__lan__change">
+                  For more info, here's my
+                  <a
+                    href="./Vohidov Sarvarbek Resume.docx"
+                    id="wordDownload"
+                    download
+                    >resume</a
+                  >
+                </p>
+              </div>
+
+              <div class="social__links" data-aos="fade-up">
                 <a href="https://t.me/OblivionX_2"
                   ><i class="bi bi-telegram connect__icon"></i
                 ></a>
@@ -469,7 +480,7 @@
                 ></a>
               </div>
             </div>
-            <div class="second__connect">
+            <div class="second__connect" data-aos="fade-up">
               <form action="" id="user__details">
                 <label for="userName" class="connect__lan__change">Name</label
                 ><br />
@@ -547,5 +558,13 @@
     }
 
     window.addEventListener("DOMContentLoaded", initPage);
+  </script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 </html>

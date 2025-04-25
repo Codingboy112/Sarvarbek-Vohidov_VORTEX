@@ -44,6 +44,7 @@ html {
 
 .toTop:hover {
   background-color: #8a9850;
+  box-shadow: 0 0 5px #8a9850, 0 0 5px #8a9850, 0 0 5px #8a9850;
 }
 
 @media only screen and (max-width: 500px) {

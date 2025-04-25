@@ -132,13 +132,13 @@
         <section class="aboutme">
           <div class="aboutme__wrapper">
             <div class="first__aboutme">
-              <h2 class="aboutme__intro aboutSecLang">ABOUT ME</h2>
+              <h2 class="aboutme__intro aboutSecLang" data-aos="fade-up">ABOUT ME</h2>
 
-              <p class="aboutme__main aboutSecLang">
+              <p class="aboutme__main aboutSecLang" data-aos="fade-up">
                 I am a front-end developer born in Uzbekistan. I have a
                 problem-solving and communicating skills.
               </p>
-              <p class="aboutme__small aboutSecLang">
+              <p class="aboutme__small aboutSecLang" data-aos="fade-up">
                 I am a front-end developer based in Sydney looking for exciting
                 opportunities. Has Mechanical Engineering background. Likes to
                 focus on accessibility when developing. Passionate and curious
@@ -147,7 +147,7 @@
                 enjoy playing football, photography and playing Valorant.
                 Learning more to improve skill.
               </p>
-            <div class="contact__divs">
+            <div class="contact__divs" data-aos="fade-up">
                 <a href="./Vohidov Sarvarbek Resume.docx" id="wordDownload" download
                   ><button class="hero__contact--btn aboutSecLang">
                     DOWNLOAD RESUME <i class="bi bi-download download__icon"></i></button
@@ -163,9 +163,9 @@
          </div>
             </div>
             <div class="second__aboutme">
-              <p class="skill__intro aboutSecLang">My skills</p>
+              <p class="skill__intro aboutSecLang" data-aos="fade-up">My skills</p>
               <div class="skill__container--holder">
-                <div class="skill__container">
+                <div class="skill__container" data-aos="fade-up">
                   <div class="skill">
                     <img
                       src="./assets/icons8-html5-96.png"
@@ -234,18 +234,18 @@
             </div>
           </div>
         </section>
-        <section class="section__image">
+        <section class="section__image" data-aos="fade-up">
             <img src="./assets/aboutme__person.png"  alt="">
         </section>
         <section class="capabilities">
             <div class="capabilities__wrapper">
                 <div class="first__capability">
-                    <h1 class="capability__intro capabilities_Lang">MY CAPABILITIES</h1>
+                    <h1 class="capability__intro capabilities_Lang" data-aos="fade-up">MY CAPABILITIES</h1>
                 </div>
                 <div class="second__capability">
-                    <p class="capability__motive capabilities_Lang">
+                    <p class="capability__motive capabilities_Lang" data-aos="fade-up">
                         These skills will help me collaborate effectively, and I'm excited to keep improving and adding more to my knowledge."
-                        <div class="capability__show">
+                        <div class="capability__show" data-aos="fade-up">
                             <button class="skill__capab capabilities_Lang">Upper-intermediate English level (B2)</button>
                             <button class="skill__capab capabilities_Lang">Adaptability</button>
                             <button class="skill__capab capabilities_Lang">Time Management</button>
@@ -260,17 +260,17 @@
         <section class="experience">
             <div class="experience__wrapper">
                 <div class="first__experience">
-                    <h1 class="experience__intro exper_lang">MY EXPERIENCE</h1>
+                    <h1 class="experience__intro exper_lang" data-aos="fade-up">MY EXPERIENCE</h1>
                 </div>
                 <div class="second__experience">
-                    <div class="experience__div">
-                        <div class="exper__wrapper">
+                    <div class="experience__div" data-aos="fade-up">
+                        <div class="exper__wrapper" data-aos="fade-up">
                             <p class="experience__job exper_lang">Freelance Developer</p>
                             <p class="experience__date exper_lang">Nov 2023 — Present </p>
                         </div>
                         <p class="experience__details exper_lang">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     </div>
-                    <div class="experience__div">
+                    <div class="experience__div" data-aos="fade-up">
                         <div class="exper__wrapper">
                             <p class="experience__job exper_lang">Freelance Developer</p>
                             <p class="experience__date exper_lang">Nov 2023 — Present </p>
@@ -288,7 +288,8 @@
         <div class="container">
           <div class="connect__wrapper">
             <div class="first__connect">
-              <h2 class="connect__intro connect__lan__change">LET'S CONNECT</h2>
+              <h2 class="connect__intro connect__lan__change" data-aos="fade-up">LET'S CONNECT</h2>
+            <div data-aos="fade-up">
               <p class="hello__text connect__lan__change">
                 Say hello at
                 <a href="mailto:tylertheunknownss@gmail.com"
@@ -298,6 +299,7 @@
               <p class="more__info connect__lan__change">
                 For more info, here's my <a href="./Vohidov Sarvarbek Resume.docx" download id="wordDownload">resume</a>
               </p>
+            </div>
               <div class="social__links">
                 <a href="https://t.me/OblivionX_2"
                   ><i class="bi bi-telegram connect__icon"></i
@@ -313,7 +315,7 @@
                 ></a>
               </div>
             </div>
-            <div class="second__connect">
+            <div class="second__connect" data-aos="fade-up">
               <form action="" id="user__details">
                 <label for="userName" class="connect__lan__change">Name</label><br />
                 <input
@@ -361,6 +363,14 @@
   <script src="app.js"></script>
   <script src="translations.js" type="module"></script>
   <script src="translationAbout.js" type="module"></script>
+  <link
+  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   <!-- <script type="module">
     
     import { translations, fetchTextArray } from './indexTranslations.js';

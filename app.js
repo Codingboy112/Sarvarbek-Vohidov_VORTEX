@@ -55,6 +55,10 @@ window.addEventListener("scroll", () => {
   } else if (currentScrollY > lastScrollY) {
     toTop.style.bottom = "-100px"
   }
+
+  if (currentScrollY === 0) {
+    toTop.style.bottom = "-100px"
+  }
  
   lastScrollY = currentScrollY;
 });
