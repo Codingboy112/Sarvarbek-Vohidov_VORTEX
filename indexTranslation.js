@@ -11,6 +11,7 @@ let changeAboutLang = document.querySelectorAll('.aboutSection_lang');
 let connectLan = document.querySelectorAll('.connect__lan__change');
 const languageSelect = document.querySelector("#choose__lang");
 const languageSelect2 = document.querySelector("#choose__lang2");
+let statusYear1 = document.querySelectorAll('.statusYear1');
 
 
 async function changeLanguage(lang, changeLang) {
@@ -42,7 +43,8 @@ async function changeLanguage(lang, changeLang) {
 
   // First Project
   projectLan[0].innerText = langTranslations.featured;
-  changeLang(projectLan[0], lang);
+  changeLang(projectLan[0], lang);  
+  
   projectLan[1].innerHTML = langTranslations.featuredIntro;
   projectLan[2].innerHTML = langTranslations.featuredStatus;
   projectLan[3].innerHTML = langTranslations.featuredProTitle;
@@ -51,8 +53,11 @@ async function changeLanguage(lang, changeLang) {
   projectLan[6].innerHTML = langTranslations.featuredTextYear;
   projectLan[7].innerHTML = langTranslations.featuredTextRole;
   projectLan[8].innerHTML = langTranslations.featuredTextFront;
+  statusYear1[0].innerHTML = langTranslations.featuredYear;
   projectLan[9].innerHTML = langTranslations.featuredTextLive;
   projectLan[10].innerHTML = langTranslations.featuredTextSee;
+
+  
 
   // Second Project
   secondProLan[0].innerHTML = langTranslations.secondProStatus;
@@ -63,6 +68,7 @@ async function changeLanguage(lang, changeLang) {
   secondProLan[5].innerHTML = langTranslations.featuredTextRole;
   secondProLan[6].innerHTML = langTranslations.featuredTextFront;
   secondProLan[7].innerHTML = langTranslations.featuredTextLive;
+    statusYear1[1].innerHTML = langTranslations.featuredYear2;
   secondProLan[8].innerHTML = langTranslations.featuredTextSee;
 
   // Third Project
@@ -74,6 +80,7 @@ async function changeLanguage(lang, changeLang) {
   thirdProLan[5].innerHTML = langTranslations.featuredTextRole;
   thirdProLan[6].innerHTML = langTranslations.featuredTextFront;
   thirdProLan[7].innerHTML = langTranslations.featuredTextLive;
+    statusYear1[2].innerHTML = langTranslations.featuredYear3;
   thirdProLan[8].innerHTML = langTranslations.featuredTextSee;
 
   // About Section

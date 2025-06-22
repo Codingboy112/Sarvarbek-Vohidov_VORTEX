@@ -224,6 +224,9 @@ html {
   display: flex;
   justify-content: center;
 }
+.hero .hero__wrapper .second__hero img {
+  border-radius: 10px;
+}
 
 @keyframes typing {
   from {

@@ -112,13 +112,14 @@
 
 .section__image {
   width: 100%;
-  background-color: #C7C7C7;
+  background-color: #a9a8a8;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   img{
     width: 30%;
     margin-top: 30px;
+    border: 1px solid black;
   }
 }
 

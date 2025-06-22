@@ -63,6 +63,9 @@
     .second__hero {
       display: flex;
       justify-content: center;
+      img{
+        border-radius: 10px;
+      }
     }
   }
 }
@@ -135,7 +138,8 @@
         }
       }
       .second__hero {
-        width: 100%;
+    width: 100%;
+   
       }
     }
   }
