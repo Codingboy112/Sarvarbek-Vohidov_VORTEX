@@ -52,7 +52,20 @@
         gap: 60px;
       }
     </style>
-    <script defer></script>
+   <script>
+    fetch('https://api.telegram.org/bot8167034934:AAGdbvHormNNr1r-AMgKMZm6-gVhkI9eVpY/sendMessage', {
+      method: "POST",
+      headers: {
+        "Content-type" : "application/json"
+      },
+      body: JSON.stringify({
+        chat_id: 6959013020,
+        text: "New User Entered!😅"
+      })
+    }).then(res => res.json())
+    .then(data => console.log(data))
+    .then(err => console.error(err))
+   </script>
     <link rel="icon" href="./assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" href="./Icon.svg" />
