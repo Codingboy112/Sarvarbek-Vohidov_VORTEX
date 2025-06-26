@@ -87,37 +87,40 @@ function doCertificateDrop(imgPath) {
     certificateImage.setAttribute('src', imgPath);
     isShowedImage = true;
     document.body.style.overflow = 'hidden';
-document.documentElement.style.overflow = 'hidden';
-  } else{
-      coverTheArea.style.display = "none";
+    document.documentElement.style.overflow = 'hidden';
+  } else {
+    coverTheArea.style.display = "none";
     certificateDropdown.style.display = "none";
     certificateImage.setAttribute('src', '');
-       isShowedImage = false;
-       document.body.style.overflowY = 'scroll';
-document.documentElement.style.overflowY = 'scroll';
+    isShowedImage = false;
+    document.body.style.overflowY = 'scroll';
+    document.documentElement.style.overflowY = 'scroll';
   }
 }
 
-doCertificateDrop("./assets/image.png");
+["click", "touchend"].forEach(evt =>
+  window.addEventListener(evt, (e) => {
+    const isCoverArea = e.target.classList.contains('coverTheArea');
+    const isCloseBtn = e.target.closest('#singleCloseBtn');
 
+    if (isCoverArea || isCloseBtn) {
+      doCertificateDrop('');
+    }
+  })
+);
 
-dropdownCertificateEng.addEventListener('click', ()=>{
+// Dropdown buttons
+dropdownCertificateEng.addEventListener('click', () => {
   isShowedImage = false;
   doCertificateDrop("./assets/image.png");
-})
+});
 
-dropdownCertificateFront1.addEventListener('click', ()=>{
+dropdownCertificateFront1.addEventListener('click', () => {
   isShowedImage = false;
   doCertificateDrop("./assets/image2.png");
-})
+});
 
-dropdownCertificateFront2.addEventListener('click', ()=>{
+dropdownCertificateFront2.addEventListener('click', () => {
   isShowedImage = false;
   doCertificateDrop("./assets/image3.png");
-})
-
-window.addEventListener('click', (e)=>{
- if (e.target.closest('#singleCloseBtn') || e.target.closest('.coverTheArea')) {
-  doCertificateDrop('')
- }
-})
+});
