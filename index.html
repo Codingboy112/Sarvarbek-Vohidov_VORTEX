@@ -52,20 +52,49 @@
         gap: 60px;
       }
     </style>
-   <script>
-    fetch('https://api.telegram.org/bot8167034934:AAGdbvHormNNr1r-AMgKMZm6-gVhkI9eVpY/sendMessage', {
-      method: "POST",
-      headers: {
-        "Content-type" : "application/json"
-      },
-      body: JSON.stringify({
-        chat_id: 6959013020,
-        text: "New User Entered!😅"
-      })
-    }).then(res => res.json())
-    .then(data => console.log(data))
-    .then(err => console.error(err))
-   </script>
+    <script>
+      let userId = localStorage.getItem("uid");
+
+      function enteredUser(message) {
+        fetch(
+          "https://api.telegram.org/bot8167034934:AAGdbvHormNNr1r-AMgKMZm6-gVhkI9eVpY/sendMessage",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: 6959013020,
+              text: message,
+            }),
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => console.log(data))
+          .then((err) => console.error(err));
+      }
+
+      if (userId) {
+        enteredUser(`user with the ID: ${userId}`);
+      } else {
+        function generateRandomString(length = 8) {
+          const characters =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+          let result = "";
+          for (let i = 0; i < length; i++) {
+            result += characters.charAt(
+              Math.floor(Math.random() * characters.length)
+            );
+          }
+          return result;
+        }
+        let createdId = generateRandomString();
+
+
+        localStorage.setItem('uid', createdId);
+        enteredUser(`New user entered. generated ID: ${createdId}`);
+      }
+    </script>
     <link rel="icon" href="./assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" href="./Icon.svg" />
